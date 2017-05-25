@@ -1,0 +1,729 @@
+@font-face {
+    font-family: Synthview;
+    src: url(../fonts/Synthview.otf);
+}
+@font-face {
+    font-family: Novecento-medium;
+    src: url(../fonts/Novecentosanswide-Medium-webfont.woff);
+}
+
+@font-face {
+    font-family: Novecento-light;
+    src: url(../fonts/Novecentosanswide-Light-webfont.woff);
+}
+@font-face {
+    font-family: Novocento-bold;
+    src: url(../fonts/Novecentosanswide-DemiBold-webfont.woff);
+}
+
+@font-face {
+    font-family: "Gill Sans MT";
+    src: url(../fonts/33535gillsansmt.woff);
+}
+ul.nav-pills{
+    top: 20px;
+    position: fixed;
+}
+
+#nav-novi-oglas{
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+#map{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    width: 100%;
+    height: 70%;
+}
+
+#geocoding {
+    position: absolute;
+    left: 16%;
+    z-index:15;
+    padding: 160px;
+
+}
+
+#footer {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    color: #FFFFFF;
+    background-color: #000000;
+    background: url("../picture/footer.png");
+    background-size: 100%;
+    background-repeat: repeat;
+}
+
+#transparent-navbar{
+    background:transparent;
+}
+
+#logo {
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+}
+#logo-tekst{
+    color: #ffffff;
+    font-family: 'Novocento-bold';
+    font-size: 26px;
+    text-align: left;
+    margin-left: 10px;
+}
+#logo-tekstall{
+    color: #727476;
+    font-size: 26px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+#logo-tekstadmin{
+    color: #f7901b;
+    font-size: 26px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+#navbar-slova{
+    color: #ffffff;
+    font-size: 24px;
+    text-align: left;
+
+}
+
+#navbar-slovaall{
+
+    color: #727476;
+    font-size: 24px;
+    text-align: left;
+
+}
+
+#control-geocoding{
+    position: absolute;
+    padding:7px;
+    z-index:0;
+    left:0px;
+    top:0px;
+}
+
+#control-trazilica,#rezultat-tarzilice{
+    background-color: white;
+    font-size:12px;
+    margin:5px;
+    max-height: 200px;
+    overflow: auto;
+    width:380px;
+    padding: 8px;
+    border-radius: 2px;
+    box-shadow: #000000 0px 1px 4px -1px;
+    min-width: 40px;
+    background-clip: padding-box;
+}
+
+#myScrollspy{
+    position: fixed;
+    float: left;
+    top: 15px;
+}
+
+#novi-oglas-forma-div{
+    position: relative;
+    float: right;
+}
+
+.bar {
+    height: 18px;
+    background: green;
+}
+
+#background-top{
+
+    background-image: url("../picture/LANDING_GLAVNA_SLIKA_BLURRED.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+}
+
+#background-top-onama{
+
+    background-image: url("../picture/US.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+}
+
+#nav-bar-register{
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    font-size: 24px;
+    color: #f7901b;
+}
+#nav-bar-registerall{
+    font-size: 24px;
+    color: #f7901b;
+}
+
+@media screen and (max-width: 810px) {
+    #opis, #prostor, #sadrzaji, #dostupnost, #slike  {
+        margin-left: 150px;
+    }
+}
+
+.welcome-slider {
+    width: 100%;
+}
+
+.fa-btn {
+    margin-right: 6px;
+}
+
+#container-navbar-welcome {
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#container-navbar-all {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.trazi-filteri-text{
+    font-size: 20px;
+}
+
+#btn-extrafilters{
+    color: #017bd0;
+    border: solid;
+    border-width: 1px;
+    border-color: #017bd0;
+    background-color: #ffffff;
+    width: 100%;
+    display: inline-block;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 0px;
+    text-align: center;
+    vertical-align: middle;
+    white-space:nowrap;
+    line-height:1.42857143;
+}
+
+#btn-extrafilters:hover{
+    background-color: #017bd0;
+    color: #FFFFFF;
+    border:1px solid transparent;
+    white-space:nowrap;
+}
+
+#btn-filtriraj{
+    color: #ffffff;
+    background-color: #017bd0;
+    width: 100%;
+    display: inline-block;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 0px;
+    text-align: center;
+    vertical-align: middle;
+    white-space:nowrap;
+    line-height:1.42857143;
+    border:1px solid transparent;
+}
+
+#btn-filtriraj:hover{
+    background-color: #0096ff;
+}
+
+#btn-filtriraj:active{
+    background-color: #0064aa;
+
+}
+
+.padding-trazi-sadrzaj{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.trazi-filteri-background{
+    background-color: #fdfdfd;
+}
+
+.trazi-checkboxtext {
+    color: #7c7c7c;
+    font-size: 16px;
+}
+
+
+#trazi-oglasi-naslov{
+    background:rgba(0,0,0,0.05);
+    color: #000000;
+
+    text-align: left;
+}
+
+#trazi-oglasi-cijena{
+    background:rgba(0,0,0,0.5);
+    color: lightgrey;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    font-size: 24px;
+}
+
+#container-login{
+    min-height: 80vh;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+#registerbody{
+
+    min-height: 80vh;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.a-footer{
+    color: #FFFFFF;
+}
+
+.b-footer{
+    color: #FFFFFF;
+}
+
+a.a-footer:hover, a.a-footer:active {
+    text-decoration: none;
+    color: darkgray;
+}
+
+.welcome-prijaviseodmah{
+    color: #FFFFFF;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 24px;
+    background-color: #f7901b;
+}
+
+.btn-wel-submit{
+    display: inline-block;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin-bottom: 0px;
+    font-family: 'Novecento-medium';
+    font-size: 21px;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    background-color: #017bd0;
+    color: #FFFFFF;
+    white-space:nowrap;
+    line-height:1.42857143;
+    border:1px solid transparent;
+
+}
+
+.welcome-vise:hover,.welcome-prijaviseodmah:hover,.btn-wel-submit:hover{
+    background-color: #0096ff;
+}
+
+.welcome-vise:active,.welcome-prijaviseodmah:active,.btn-wel-submit:active{
+    background-color: #0064aa;
+}
+
+.welcome-vise{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    background-color: #017bd0;
+}
+
+#naslov-welcome-1{
+    font-size: 50px;
+    font-family: 'Gill Sans MT', sans-serif ;
+    font-weight: 600;
+}
+
+#naslov-welcome {
+    color: #ffffff;
+    padding-top: 25vh;
+}
+
+#naslov-welcome-2 {
+    font-size: 24px;
+    font-family: 'Open Sans';
+    font-weight: 400;
+}
+
+#welcome-form-open {
+    background-color: rgba(0, 0, 0, 0.25);
+    margin-top: 50px;
+}
+
+#welcome-selects-zgk {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 40px;
+    font-family: 'Open Sans';
+}
+
+#welcome-select-position {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sldr-hoover:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
+#welcome-najmodavac {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    padding-top: 50px;
+    border-bottom: solid;
+    border-color: transparent;
+    border-width: 1px;
+}
+
+#welcome-student {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    padding-top: 50px;
+    border-bottom: solid;
+    border-color: gray;
+    border-width: 1px;
+}
+
+#welcome-studenttext {
+    color: #4b4b4b;
+    font-family: 'Open Sans';
+    font-size: 34px;
+    text-align: left;
+}
+
+#welcome-stmaptext {
+    color: #727476;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+#welcome-najmodavactext {
+    color: #4b4b4b;
+    font-family: 'Open Sans';
+    font-size: 34px;
+    text-align: right;
+}
+
+#welcome-ndoglasi {
+    color: #727476;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.col-trazi-62{
+    width: 62.5%;
+    position:relative;
+    min-height:1px;
+    padding-right:15px;
+    padding-left:15px;
+    float: left;
+}
+
+.col-trazi-37{
+    width: 37.5%;
+    position:relative;
+    min-height:1px;
+    padding-right:15px;
+    float: left;
+}
+
+.a-navbar>li:hover{
+    background-color: #EDEDED;
+}
+
+.a-navbar>li:active{
+    background-color: #D1D1D1;
+}
+
+.margin-t-50 {
+    margin-top: 50px;
+}
+
+.txt-help-hdr {
+    font-size: 32px;
+    color: grey;
+}
+
+.table-help {
+    margin-top: 50px;
+}
+
+.help-tbl-slika {
+    border: 40px solid #FFFFFF;
+}
+
+.help-nd-2 {
+    background-color: #58c67c;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 30px;
+    border: 40px solid #FFFFFF
+}
+
+.help-nd-1 {
+    background-color: #00b3ee;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 30px;
+    border: 40px solid #FFFFFF
+}
+
+.help-st-3 {
+    background-color: #ffc600;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 30px;
+    border: 40px solid #FFFFFF;
+}
+
+.help-st-1 {
+    background-color: #58c67c;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 30px;
+    border: 40px solid #FFFFFF;
+}
+
+.help-st-2 {
+    background-color: #00b3ee;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 30px;
+    border: 40px solid #FFFFFF;
+}
+
+.font20 {
+    font-size: 20px;
+}
+
+.margin-t-20 {
+    margin-top: 20px;
+}
+
+.napomena-naslov {
+    font-family: 'Novecento-medium';
+    font-size: 22px;
+}
+
+.napomena-text {
+    font-size: 18px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.napomena-box {
+
+    font-size: 18px;
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f7901b;
+    color: #FFFFFF;
+}
+
+.btn-contact-sbmt{
+    display: inline-block;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin-bottom: 0px;
+    font-family: 'Novecento-medium';
+    font-size: 21px;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    background-color: #017bd0;
+    color: #FFFFFF;
+    white-space:nowrap;
+    line-height:1.42857143;
+    border:1px solid transparent;
+
+}
+
+.geocode-address{
+    width: 100%;
+    margin-left: -10px;
+}
+.bzvz{
+    display: inline-block;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    margin-bottom: 0px;
+    background-color: #2f92ee;
+    color:  white;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    white-space:nowrap;
+    line-height:1.42857143;
+    border:1px solid transparent;
+}
+
+
+#btn-upload {
+    width: 1px;
+    visibility: hidden;
+}
+#btn-click-upload{
+    width: 100%;
+    display: inline-block;;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    margin-bottom: 0px;
+    background-color: #FFFFFF;
+    color:  #2f92ee;
+    text-align: center;
+    vertical-align: middle;
+    white-space:nowrap;
+    line-height:1.42857143;
+    border:1px solid rgba(0,0,0, 0.1);
+}
+
+#btn-click-upload:hover{
+    text-decoration: underline;
+    border:3px solid #2f92ee;
+}
+
+.padding-t-50 {
+    padding-top: 50px;
+}
+
+.padding-b-50 {
+    padding-bottom: 50px;
+}
+
+.padding-t-15 {
+    padding-top: 15px;
+}
+
+@media (min-width: 979px) {
+    ul.nav li.dropdown:hover > ul.dropdown-menu {
+        display: block;
+    }
+}
+
+.navbar-plusic{
+    color: #ffffff;
+    font-size: 24px;
+    text-align: left;
+}
+
+#navbar-izradi-oglas{
+    display: none;
+}
+
+.navbar-plusic:hover #navbar-izradi-oglas{
+    color: #f7901b;
+    display: block;
+}
+.navbar-plusic:hover #navbar-izradi-oglas-off{
+    display: none;
+}
+
+.navbar-plusic-all{
+    font-size: 22px;
+    text-align: left;
+    color: #f7901b;
+}
+
+#navbar-izradi-oglas-all{
+    display: none;
+}
+
+.navbar-plusic-all:hover #navbar-izradi-oglas-all{
+    display: block;
+    color: #f7901b;
+
+
+}
+.navbar-plusic-all:hover #navbar-izradi-oglas-off-all{
+    display: none;
+}
+
+.btn-prijava-sub{
+    display: inline-block;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 0px;
+    font-size: 21px;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    background-color: #017bd0;
+    color: #FFFFFF;
+    white-space:nowrap;
+    line-height:1.42857143;
+    border:1px solid transparent;
+}
+
+.btn-register-sub{
+    display: inline-block;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 0px;
+    font-size: 21px;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    background-color: #017bd0;
+    color: #FFFFFF;
+    white-space:nowrap;
+    line-height:1.42857143;
+    border:1px solid transparent;
+}
+
+.ahref-about-team{
+    padding-top: 15px;
+    color: #000000;
+    font-size: 18px;
+}
+
+.ahref-about-team:hover{
+    border:solid 5px transparent;
+}
+
+.btn-azuriraj-profil{
+    display: inline-block;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 0px;
+    font-size: 21px;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    background-color: #017bd0;
+    color: #FFFFFF;
+    white-space:nowrap;
+    line-height:1.42857143;
+    border:1px solid transparent;
+}
+
