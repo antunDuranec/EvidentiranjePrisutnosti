@@ -17,7 +17,7 @@ class Termin extends Model
      * @var array
      */
     protected $fillable = [
-        'sifra_termina','datum','sifra_kolegija',
+        'sifra_termina','datum','sifra_kolegija','vrijeme_pocetka','vrijeme_kraja',
     ];
 
     /**

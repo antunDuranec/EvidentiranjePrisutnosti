@@ -73,6 +73,7 @@ class EvidencijaController extends Controller
             ->whereDate('datum_evidentiranja','=',Carbon::now()->toDateString())
             ->count();
 
+
         $vrijemePocetka = DB::table('termin')
             ->where('sifra_termina','>=',$request->get('sifra_termina'))
             ->whereTime('termin.vrijeme_pocetka', '>=', $time)
@@ -170,6 +171,7 @@ class EvidencijaController extends Controller
     public function indexPrisutnost()
     {
         $id = Auth::user()->sifra_korisnika;
+
 
         $kolegiji = DB::table('kolegij')
             ->leftJoin('student_na_kolegiju', 'kolegij.sifra_kolegija', '=', 'student_na_kolegiju.sifra_kolegija')
