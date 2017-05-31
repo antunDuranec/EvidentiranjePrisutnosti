@@ -28,6 +28,8 @@ class EvidencijaController extends Controller
                     ->leftJoin('termin', 'kolegij.sifra_kolegija', '=', 'termin.sifra_kolegija')
                     ->where('users.sifra_korisnika','=',Auth::user()->sifra_korisnika)
                     ->whereDate('termin.datum','=',Carbon::now()->toDateString())
+                    //->whereTime('termin.vrijeme_pocetka', '<=', Carbon::now()->toTimeString())
+                    //->whereTime('termin.vrijeme_kraja', '>=', Carbon::now()->toTimeString())
                     ->get();
 
 
@@ -53,6 +55,9 @@ class EvidencijaController extends Controller
     public function store(Request $request)
     {
         $current = Carbon::now()->toDateTimeString();
+        $dt = Carbon::now();
+        $dt->setTimezone('Europe/Zagreb');
+        $time = $dt->toTimeString();
         //$now = new DateTime();
 
         $evidencija = new Evidencija(array(
@@ -68,6 +73,30 @@ class EvidencijaController extends Controller
             ->whereDate('datum_evidentiranja','=',Carbon::now()->toDateString())
             ->count();
 
+        $vrijemePocetka = DB::table('termin')
+            ->where('sifra_termina','>=',$request->get('sifra_termina'))
+            ->whereTime('termin.vrijeme_pocetka', '>=', $time)
+            ->count();
+
+        $vrijemeKraja = DB::table('termin')
+            ->where('sifra_termina','>=',$request->get('sifra_termina'))
+            ->whereTime('termin.vrijeme_kraja', '<=', $time)
+            ->count();
+
+
+        if ($vrijemePocetka!=0){
+
+            Session::flash('flash_message1', 'Vrijeme početka termina nije još počelo!!!');
+
+            return redirect()->back();
+        }
+
+        if ($vrijemeKraja!=0){
+
+            Session::flash('flash_message1', 'Termin je za današnji datum završio. Ne možete se prijaviti. !!!');
+
+            return redirect()->back();
+        }
 
 
         if ($provjeraPrijave==1){
