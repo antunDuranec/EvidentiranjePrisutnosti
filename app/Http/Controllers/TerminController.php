@@ -56,9 +56,9 @@ class TerminController extends Controller
 
             return view('termin.unos', compact('kolegiji'));
 
-        }
+        }elseif (Auth::user()->razina_prava == 1){
 
-        return view('termin.unos', compact('kolegiji'));
+        return view('termin.unos', compact('kolegiji'));}
 
     }
 
@@ -73,11 +73,17 @@ class TerminController extends Controller
         $this->validate($request, [
             'datum' => 'required|date',
             'sifra_kolegija' => 'required|not_in:0',
+            'vrijeme_pocetka' => 'required',
+            'vrijeme_kraja' => 'required',
 
         ], [
             //Custom Error poruke
-            'datum.required' => 'Niste unijeli naziv kolegija!',
+            'datum.required' => 'Niste unijeli datum terima!',
             'datum.date' => 'Niste unijeli ispravan datum!',
+            'vrijeme_pocetka.required' => 'Niste unijeli vrijeme početka termina!',
+            //'vrijeme_pocetka.time' => 'Niste unijeli ispravano vrijeme!',
+            'vrijeme_kraja.required' => 'Niste unijeli vrijeme kraja termina!',
+           // 'vrijeme_kraja.time' => 'Niste unijeli ispravano vrijeme!',
             'sifra_kolegija.required' => 'Niste odabrali kolegij!',
             'sifra_kolegija.not_in' => 'Niste odabrali kolegij!',
 
@@ -87,7 +93,17 @@ class TerminController extends Controller
 
             'datum' => $request->get('datum'),
             'sifra_kolegija' => $request->get('sifra_kolegija'),
+            'vrijeme_pocetka' => $request->get('vrijeme_pocetka'),
+            'vrijeme_kraja' => $request->get('vrijeme_kraja'),
         ));
+
+        if($request->get('vrijeme_pocetka')>$request->get('vrijeme_kraja')){
+
+            Session::flash('flash_message1', 'Vrijeme početka termina ne može biti poslije vremena kraja termina!!Ispravite grešku!!!');
+
+            return redirect()->back();
+
+        }
 
         $provjeraTermina = DB::table('termin')
             ->where('datum', '=', $request->get('datum'))

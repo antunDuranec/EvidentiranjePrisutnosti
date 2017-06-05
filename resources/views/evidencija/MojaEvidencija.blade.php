@@ -39,33 +39,42 @@
                                 $datumCREATED = Datetime::createFromFormat('Y-m-d',$originalDateCREATED);
                                 $datum = $datumCREATED->format('d.m.Y');?>
 
+
                                 <tr>
                                     <td>{{$datum}}</td>
 
-                                @forelse ($evidencije as $evidencija)
+                                    @forelse ($evidencije as $evidencija)
 
-                                        @if($evidencija->datum_evidentiranja==$termin->datum)
+                                        @if($evidencija->datum_evidentiranja==$termin->datum && $evidencija->sifra_studenta_na_kolegiju==$kolegij->sifra_studenta_na_kolegiju)
 
                                             @if($evidencija->vrsta_predavanja=='P')
                                                 <td>Predavanje</td>
+                                            @elseif($evidencija->vrsta_predavanja=='S')
+                                                <td>Seminar</td>
+                                            @elseif($evidencija->vrsta_predavanja=='V')
+                                                <td>Vježbe</td>
                                             @endif
 
                                             @if($evidencija->prisutnost==1)
                                                 <td>DA</td>
+                                            @elseif($evidencija->prisutnost==0)
+                                                <td>NE</td>
                                             @else
                                                 <td>NE</td>
                                             @endif
 
+                                        @elseif($evidencija->datum_evidentiranja!=$termin->datum && $evidencija->sifra_studenta_na_kolegiju==$kolegij->sifra_studenta_na_kolegiju)
+                                            <td>-------------</td>
+                                            <td>----</td>
 
                                         @endif
 
-                                @empty
+                                    @empty
                                         <td>Predavanje</td>
                                         <td>NE</td>
                                 @endforelse
 
-                                    </tr>
-
+                                </tr>
                             @endif
 
                         @endforeach

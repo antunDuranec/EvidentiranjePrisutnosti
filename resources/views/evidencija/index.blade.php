@@ -40,6 +40,9 @@
 
                                         {{ Form::hidden('student', $student->sifra_studenta_na_kolegiju) }}
 
+                                        {{ Form::hidden('sifra_termina', $student->sifra_termina) }}
+
+
                                         {!! Form::close() !!}
 
                                     </td>
