@@ -45,7 +45,7 @@
 
                                     @forelse ($evidencije as $evidencija)
 
-                                        @if($evidencija->datum_evidentiranja==$termin->datum)
+                                        @if($evidencija->datum_evidentiranja==$termin->datum && $evidencija->sifra_studenta_na_kolegiju==$kolegij->sifra_studenta_na_kolegiju)
 
                                             @if($evidencija->vrsta_predavanja=='P')
                                                 <td>Predavanje</td>
@@ -63,12 +63,17 @@
                                                 <td>NE</td>
                                             @endif
 
+                                        @elseif($evidencija->datum_evidentiranja!=$termin->datum && $evidencija->sifra_studenta_na_kolegiju==$kolegij->sifra_studenta_na_kolegiju)
+                                            <td>-------------</td>
+                                            <td>----</td>
+
                                         @endif
 
                                     @empty
                                         <td>Predavanje</td>
                                         <td>NE</td>
                                 @endforelse
+
                                 </tr>
                             @endif
 

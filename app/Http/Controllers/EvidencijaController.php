@@ -189,7 +189,6 @@ class EvidencijaController extends Controller
             ->select('evidencija.*','student_na_kolegiju.sifra_kolegija','student_na_kolegiju.sifra_studenta_na_kolegiju','student_na_kolegiju.sifra_korisnika')
             ->get();
 
-
         return view('evidencija.mojaEvidencija',compact('kolegiji','evidencije','termini'));
     }
 
